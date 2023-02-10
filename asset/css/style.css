@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat&family=Poppins&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #d0caff;
+    --cont: #0078ff;
+    --text: #fff;
+
+}
+
+a {
+    transition: all .50 ease;
+}
+
+body {
+    background-color: var(--bg);
+    font-family: 'lato', sans-serif;
+}
+
+.offside:before {
+    display: block;
+    content: "";
+    height: 6rem;
+}
+
+
+/* navbar */
+.navbar {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+}
+
+.navbar-nav {
+    text-transform: uppercase;
+}
+
+.navbar-brand .logo {
+    color: var(--text);
+    font-size: 30px;
+}
+
+.navbar-brand span {
+    color: var(--cont);
+    font-size: 30px;
+}
+
+.navbar .nav-link {
+    color: var(--text);
+    padding-left: 50px;
+}
+
+.navbar .nav-link:hover {
+    color: var(--cont);
+}
+
+.navbar .nav-link.active {
+    color: var(--cont);
+}
+
+/* navbar costum */
+.costum-link {
+    font-weight: 700;
+    position: relative;
+
+}
+
+.costum-link::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: var(--cont);
+    position: absolute;
+    left: 0;
+    top: 35px;
+    transition: all .4s ease;
+}
+
+.costum-link:hover {
+    color: var(--cont);
+    transition: all .4s ease;
+}
+
+.costum-link:hover::after {
+    width: 100%;
+}
+
+/* end navbar */
+
+/* conten */
+.home {
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(/asset/img/FB_IMG_1542745374479.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* home */
+.hero {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 200px;
+    color: var(--text);
+}
+
+.animasi {
+    height: 45px;
+    overflow: hidden;
+
+}
+
+.line1 {
+    animation: slide 5s linear infinite;
+}
+
+@keyframes slide {
+    0% {
+        margin-top: 35px;
+    }
+
+    5% {
+        margin-top: -2px;
+    }
+
+    50% {
+        margin-top: -2px;
+    }
+
+    55% {
+        margin-top: -45px;
+    }
+
+    100% {
+        margin-top: -45px;
+    }
+
+}
+
+.btn {
+    padding: 5px 15px;
+    margin-top: 10px;
+    color: var(--bg);
+    font-weight: bold;
+}
+
+.btn-brand {
+    background-color: var(--cont);
+}
+
+.btn-brand:hover,
+.btn-brand:focus {
+    color: var(--bg);
+    background-color: #2088ff;
+}
+
+/* end home */
+
+/* about */
+.aboutme {
+    background-color: #fff;
+    position: relative;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+    padding: 50px;
+}
+
+.profil {
+    display: flex;
+}
+
+.profil img {
+    width: 150px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.profil .info {
+    padding-left: 12px;
+    position: relative;
+    font-size: 18px;
+
+}
+
+.profil .info i {
+    background-color: rgba(0, 119, 255, 0.2);
+    height: 30px;
+    width: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.profil .info span {
+    padding-left: 10px;
+}
+
+.about-me .judul {
+    font-size: 40px;
+    position: relative;
+}
+
+.about-me .judul::before {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 5px;
+    bottom: 0;
+    border-radius: 10px;
+    background: var(--cont);
+}
+
+.about-me p {
+    margin-top: 20px;
+}
+
+.skill p {
+    padding: 10px;
+}
+
+/* project */
+.project {
+    background-color: silver;
+}
+
+/* end project */
+
+/* contact */
+.form-control {
+    background-color: rgba(0, 119, 255, 0.2);
+}
+
+/* end contact */
+.footer {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    font-size: 20px;
+    color: var(--text);
+    position: relative;
+}
+
+.footer .sosial-link a {
+    color: var(--text);
+    font-size: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cont);
+    height: 40px;
+    width: 40px;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+.footer .sosial-link a:hover {
+    color: var(--text);
+    background-color: rgba(0, 119, 255, 0.2);
+    transition: all .50s ease;
+}
+
+/* end conten */
